@@ -1,0 +1,552 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Roman Parkhomenko GCU Social App Rest API",
+        "description": "API documentation and playground for the GCU Social App. There are no security limitations for this demo. Feel free to just press the Try It Out button in the endpoint descriptions!",
+        "contact": {
+            "email": "RParkhomen@my.gcu.edu"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8888/social/api",
+            "description": "Everything can be tested through a simple MAMP localhost URL."
+        }
+    ],
+    "paths": {
+        "/groups/": {
+            "get": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Get all affinity Groups",
+                "description": "Returns an array of all groups",
+                "operationId": "index",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AffinityGroupModel"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2_security_example": [
+                            "write:users",
+                            "read:users"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/groups/store": {
+            "post": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Add a new group",
+                "operationId": "store",
+                "requestBody": {
+                    "request": "AffinityGroupModel",
+                    "description": "Group object that needs to be added to the app",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AffinityGroupModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "petstore_auth": [
+                            "write:jobs",
+                            "read:jobs"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/groups/{id}": {
+            "get": {
+                "tags": [
+                    "Groups"
+                ],
+                "summary": "Get specific group by group id",
+                "description": "Returns specific group data.",
+                "operationId": "show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id of the group",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AffinityGroupModel"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2_security_example": [
+                            "write:users",
+                            "read:users"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/jobs/": {
+            "get": {
+                "tags": [
+                    "Jobs"
+                ],
+                "summary": "Get all jobs",
+                "description": "Returns an array of all jobs",
+                "operationId": "index",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/JobModels"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2_security_example": [
+                            "write:users",
+                            "read:users"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/jobs/store": {
+            "post": {
+                "tags": [
+                    "Jobs"
+                ],
+                "summary": "Add a new job",
+                "operationId": "store",
+                "requestBody": {
+                    "request": "JobModels",
+                    "description": "Job object that needs to be added to the app",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/JobModels"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "petstore_auth": [
+                            "write:jobs",
+                            "read:jobs"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/jobs/{id}": {
+            "get": {
+                "tags": [
+                    "Jobs"
+                ],
+                "summary": "Get specific job by job id",
+                "description": "Returns specific job data.",
+                "operationId": "show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id of the job",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/JobModels"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2_security_example": [
+                            "write:users",
+                            "read:users"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/users/": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Get all users",
+                "description": "Returns an array of all users",
+                "operationId": "index",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UserModel"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2_security_example": [
+                            "write:users",
+                            "read:users"
+                        ]
+                    }
+                ]
+            }
+        },
+        "/users/{id}": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Get specific user by user id",
+                "description": "Returns specific user data.",
+                "operationId": "show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id of the user",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UserModel"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2_security_example": [
+                            "write:users",
+                            "read:users"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AffinityGroupModel": {
+                "title": "Affinity Groups Model",
+                "description": "Affinity Groups that users can join based on interest similiarities",
+                "required": [
+                    "groupname",
+                    "descriptiono"
+                ],
+                "properties": {
+                    "id": {
+                        "title": "ID",
+                        "description": "ID",
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "groupname": {
+                        "title": "groupname",
+                        "description": "Group Name",
+                        "type": "string"
+                    },
+                    "city": {
+                        "title": "city",
+                        "description": "Group City",
+                        "type": "string"
+                    },
+                    "description": {
+                        "title": "description",
+                        "description": "Group Description",
+                        "type": "string"
+                    },
+                    "skills": {
+                        "title": "skills",
+                        "description": "Group Skills",
+                        "type": "string"
+                    },
+                    "education": {
+                        "title": "education",
+                        "description": "Group education",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "DTO": {
+                "title": "DTO",
+                "description": "DTO with status, errors, and data",
+                "properties": {
+                    "errorCode": {
+                        "title": "errorCode",
+                        "description": "Status Code",
+                        "type": "integer"
+                    },
+                    "errorMessage": {
+                        "title": "errorMessage",
+                        "description": "Error Message",
+                        "type": "string"
+                    },
+                    "data": {
+                        "title": "data",
+                        "description": "Data being returned from app",
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
+            "JobModels": {
+                "title": "Job Posts Model",
+                "description": "Job Posts Model.",
+                "required": [
+                    "companyname",
+                    "jobtitle"
+                ],
+                "properties": {
+                    "id": {
+                        "title": "ID",
+                        "description": "ID",
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "companyname": {
+                        "title": "companyname",
+                        "description": "Company Name",
+                        "type": "string"
+                    },
+                    "jobtitle": {
+                        "title": "jobtitle",
+                        "description": "Job Title",
+                        "type": "string"
+                    },
+                    "salary": {
+                        "title": "salary",
+                        "description": "Salary",
+                        "type": "integer"
+                    },
+                    "description": {
+                        "title": "description",
+                        "description": "description",
+                        "type": "string"
+                    },
+                    "city": {
+                        "title": "city",
+                        "description": "City",
+                        "type": "string"
+                    },
+                    "createdAt": {
+                        "title": "createdAt",
+                        "description": "Posted Date",
+                        "type": "string"
+                    },
+                    "updatedAt": {
+                        "title": "updatedAt",
+                        "description": "Updated Date",
+                        "type": "string"
+                    },
+                    "deletedAt": {
+                        "title": "deletedAt",
+                        "description": "Deleted At",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "UserModel": {
+                "title": "User Model",
+                "description": "User Model. Combination of Laravel's Auth extenstion and my own user attributes.",
+                "required": [
+                    "email",
+                    "password"
+                ],
+                "properties": {
+                    "id": {
+                        "title": "ID",
+                        "description": "ID",
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "firstname": {
+                        "title": "firstname",
+                        "description": "User First Name",
+                        "type": "string"
+                    },
+                    "lastname": {
+                        "title": "lastname",
+                        "description": "User Last Name",
+                        "type": "string"
+                    },
+                    "username": {
+                        "title": "username",
+                        "description": "Username",
+                        "type": "string"
+                    },
+                    "password": {
+                        "title": "password",
+                        "description": "User Password",
+                        "type": "string"
+                    },
+                    "email": {
+                        "title": "email",
+                        "description": "User Email",
+                        "type": "string"
+                    },
+                    "phone": {
+                        "title": "phone",
+                        "description": "User Phone",
+                        "type": "string"
+                    },
+                    "about": {
+                        "title": "about",
+                        "description": "About User Snippet",
+                        "type": "string"
+                    },
+                    "jobtitle": {
+                        "title": "jobtitle",
+                        "description": "User Job Title",
+                        "type": "string"
+                    },
+                    "isAdmin": {
+                        "title": "isAdmin",
+                        "description": "User Admin Access",
+                        "type": "string"
+                    },
+                    "skills": {
+                        "title": "skills",
+                        "description": "User Skills",
+                        "type": "string"
+                    },
+                    "jobhistory": {
+                        "title": "jobhistory",
+                        "description": "User Job History",
+                        "type": "string"
+                    },
+                    "education": {
+                        "title": "education",
+                        "description": "User Education",
+                        "type": "string"
+                    },
+                    "createdAt": {
+                        "title": "createdAt",
+                        "description": "User Create at",
+                        "type": "string"
+                    },
+                    "updatedAt": {
+                        "title": "updatedAt",
+                        "description": "User Updated At",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    }
+}
