@@ -69,9 +69,9 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
-                        <a href="/social/api/documentation">API Docs</a>
+                        <a href="/api/documentation">API Docs</a>
                     @else
-                        <a href="/social/api/documentation">API Docs</a>
+                        <a href="/api/documentation">API Docs</a>
                         <a href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
