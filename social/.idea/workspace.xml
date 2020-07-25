@@ -230,6 +230,7 @@
       <workItem from="1593285013009" duration="14970000" />
       <workItem from="1595185604632" duration="601000" />
       <workItem from="1595697418600" duration="252000" />
+      <workItem from="1595703576900" duration="433000" />
     </task>
     <servers />
   </component>
@@ -265,6 +266,10 @@
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="100" y="123" width="1240" height="619" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.819@0.23.1440.819" timestamp="1593295878418" />
+    <state x="444" y="241" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595703975865">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state x="444" y="241" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.819@0.23.1440.819" timestamp="1595703975865" />
     <state x="458" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593297945674">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
