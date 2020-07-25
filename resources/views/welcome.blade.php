@@ -82,7 +82,7 @@
             @endif
 
             <div class="content">
-                <img id="main-logo" src="{{ asset('public/images/acme-logo-black.svg') }}" alt="">
+                <img id="main-logo" src="{{ asset('images/acme-logo-black.svg') }}" alt="">
                 <div class="title m-b-md">
                     GCU Social App
                 </div>
