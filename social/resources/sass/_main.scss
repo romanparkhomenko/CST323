@@ -1,0 +1,158 @@
+
+#nav-logo {
+    max-width: 100px;
+}
+
+#main-logo {
+    display: block;
+    margin: 1rem auto;
+    max-width: 350px;
+    width: 100%;
+}
+
+.update-profile-form {
+    h4 {text-align: center;}
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    color: $gray;
+    border: 2px solid $orange-soda;
+
+    .update-profile-button {
+        width: 100%;
+        background: $orange-soda;
+        transition: all 250ms;
+        border: none;
+        &:hover {
+            background: $jonquil;
+            transition: all 250ms;
+        }
+    }
+}
+
+.add-job-form {
+    h4 {text-align: center;}
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    color: $gray;
+    border: 2px solid $indigo;
+
+    .update-profile-button {
+        width: 100%;
+        background: $indigo;
+        transition: all 250ms;
+        border: none;
+        &:hover {
+            background: $orange-soda;
+            transition: all 250ms;
+        }
+    }
+}
+
+.profile-data {
+    img {
+        margin: 1rem auto 1.5rem;
+        max-width: 100%;
+        display: block;
+        border-radius: 20px;
+    }
+    background: #f0f0f0;
+    box-shadow: 2px 2px 4px 1px rgba(0,0,0,0.15);
+    padding: 1rem;
+}
+
+.profile-resume {
+    background: white;
+    box-shadow: 2px 2px 4px 1px rgba(0,0,0,0.15);
+    padding: 1rem;
+
+    .resume-header {
+        padding: 1rem;
+        border-bottom: 1px solid $gray;
+    }
+
+    .skills {
+        margin: 1rem auto;
+        border: 1px solid $indigo;
+        border-radius: 5px;
+    }
+
+    .job-history {
+        margin: 1rem auto;
+        border: 1px solid $jonquil;
+        border-radius: 5px;
+    }
+
+    .education {
+        margin: 1rem auto;
+        border: 1px solid $orange-soda;
+        border-radius: 5px;
+    }
+}
+
+.profile-affinity-groups {
+    margin: 1rem auto;
+    border: 1px solid $orange-soda;
+    border-radius: 5px;
+}
+
+
+div.user-groups {
+    display: flex;
+    flex-flow: row wrap;
+
+    div.user-group {
+        background: white;
+        padding: 1rem;
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.15);
+        max-width: 45%;
+        margin: 0.5rem;
+        p { margin: 0.5rem 0; }
+    }
+}
+
+div.all-user-groups {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 1rem auto;
+
+    div.user-group {
+        background: white;
+        padding: 1rem;
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.15);
+        max-width: 25%;
+        margin: 0.5rem;
+        p { margin: 0.5rem 0; }
+    }
+}
+
+.search-job-form {
+    display: flex;
+    label {
+        display: flex;
+        flex-flow: column;
+    }
+    .search-bar {
+        flex: 1 0 auto;
+    }
+
+    div.form-group {
+        margin: 0 5px;
+    }
+
+}
+
+.all-jobs {
+    background: white;
+    box-shadow: 2px 2px 4px 1px rgba(0,0,0,0.15);
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+#job-search-results {
+    background: white;
+    box-shadow: 2px 2px 4px 1px rgba(0,0,0,0.15);
+    margin-top: 1rem;
+    padding: 1rem;
+}
