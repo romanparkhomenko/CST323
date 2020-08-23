@@ -8,6 +8,7 @@ use App\Services\Business\SecurityService;
 use App\Models\DTO;
 use App\Models\UserModel;
 use http\Exception;
+use Illuminate\Support\Facades\Log;
 
 
 class UserRestController extends Controller
@@ -40,6 +41,7 @@ class UserRestController extends Controller
      */
     public function index()
     {
+        Log::info("Entering UserRestController.index()");
         try {
             //Call Service to get all users
             $service = new SecurityService();

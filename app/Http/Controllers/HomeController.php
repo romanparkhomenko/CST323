@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Models\UserModel;
 use App\Services\Business\SecurityService;
+use Illuminate\Support\Facades\Log;
 
 class HomeController extends Controller
 {
@@ -29,6 +30,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        Log::info("Entering HomeController.index()");
         return view('home');
     }
 
@@ -42,6 +44,7 @@ class HomeController extends Controller
     }
 
     public function updateProfile(Request $request) {
+        Log::info("Entering HomeController.updateProfile()");
         $username = $request->input('username');
         $password = $request->input('password');
         $id = $request->input('id');
@@ -82,6 +85,7 @@ class HomeController extends Controller
     }
 
     public function addJob(Request $request) {
+        Log::info("Entering HomeController.addJob()");
         $this->validateJobForm($request);
 
         $companyname = $request->input('companyname');
