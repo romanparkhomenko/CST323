@@ -84,11 +84,11 @@
             <div class="content">
                 <img id="main-logo" src="{{ asset('images/acme-logo-black.svg') }}" alt="">
                 <div class="title m-b-md">
-                    GCU Social App
+                    GCU Social Application
                 </div>
 
                 <div class="links">
-                    <a target="_blank" href="https://romanparkhomenko.com">Built by Roman Parkhomenko</a>
+                    <a target="_blank" href="https://romanparkhomenko.com">Built by Roman Parkhomenko & Jay Wilson</a>
                 </div>
             </div>
         </div>
