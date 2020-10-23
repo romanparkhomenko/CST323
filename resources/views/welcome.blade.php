@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="links">
-                    <a target="_blank" href="https://romanparkhomenko.com">Built by Roman Parkhomenko & Jay Wilson</a>
+                    <a target="_blank" href="https://romanparkhomenko.com">Built by Roman Parkhomenko, Cyrus Duncan, & Mann Jaiswal</a>
                 </div>
             </div>
         </div>
